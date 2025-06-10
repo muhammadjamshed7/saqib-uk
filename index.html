@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roofing High | Professional Roofing Services in the UK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0C4B33',    // Forest green
+                        secondary: '#6D9F71',  // Sage green
+                        accent: '#F4D35E',     // Golden yellow
+                        dark: '#0D1F22',       // Deep teal
+                        light: '#F9F7F3',      // Cream white
+                        highlight: '#EE964B',  // Terracotta
+                        neutral: '#8AA29E',    // Mist gray
+                        lightaccent: '#E7EDE1'  // Pale olive
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero {
+            background-image: linear-gradient(135deg, rgba(26,28,33,0.9) 0%, rgba(58,80,107,0.7) 100%), url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .service-modal {
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .service-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .testimonial-card {
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255,255,255,0.1);
+            background: linear-gradient(135deg, rgba(26,28,33,0.8) 0%, rgba(58,80,107,0.6) 100%);
+            backdrop-filter: blur(10px);
+            transform-style: preserve-3d;
+            transition: all 0.4s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px) translateZ(10px);
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .floating-button {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/447832766458?text=Hello%20Roofing%20High,%20I'm%20interested%20in%20your%20services" 
+       class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg floating-button z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="bg-primary text-white sticky top-0 z-40 shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold flex items-center">
+                    <span class="text-white">Roofing</span>
+                    <span class="text-highlight">Pro</span>
+                    <span class="ml-1 text-xs bg-highlight text-white px-2 py-1 rounded-full">UK</span>
+                </a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="hover:text-secondary transition">Home</a>
+                    <a href="#about" class="hover:text-secondary transition">About Us</a>
+                    <div class="relative group">
+                        <button class="hover:text-secondary transition flex items-center">
+                            Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 bg-white text-primary rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
+                            <a href="#services" class="block px-4 py-2 hover:bg-gray-100">All Services</a>
+                            <a href="#services" class="block px-4 py-2 hover:bg-gray-100">Pitched Roof</a>
+                            <a href="#services" class="block px-4 py-2 hover:bg-gray-100">Flat Roof</a>
+                            <a href="#services" class="block px-4 py-2 hover:bg-gray-100">Gutter, Fascia, Soffits</a>
+                            <a href="#services" class="block px-4 py-2 hover:bg-gray-100">Roof Repair</a>
+                        </div>
+                    </div>
+                    <a href="#projects" class="hover:text-secondary transition">Projects</a>
+                    <a href="#contact" class="hover:text-secondary transition">Contact Us</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-2">
+                <a href="#" class="block py-2 hover:text-secondary transition">Home</a>
+                <a href="#about" class="block py-2 hover:text-secondary transition">About Us</a>
+                <a href="#services" class="block py-2 hover:text-secondary transition">Services</a>
+                <a href="#projects" class="block py-2 hover:text-secondary transition">Projects</a>
+                <a href="#contact" class="block py-2 hover:text-secondary transition">Contact Us</a>
+                <div class="mt-3 pt-3 border-t border-gray-700">
+                    <a href="tel:+447832766458" class="block py-2 hover:text-secondary transition"><i class="fas fa-phone mr-2"></i> +44 7832 766458</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero relative text-white py-28 md:py-40">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Premium Roofing Solutions <br>for Modern Living</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Expert roofing services with 25+ years of experience protecting homes and businesses across the UK</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-highlight hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg transform hover:-translate-y-1">
+                    Book Free Consultation
+                </a>
+                <a href="tel:+447832766458" 
+                   class="bg-secondary hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg">
+                    <i class="fas fa-phone-alt mr-2"></i> Call Now
+                </a>
+            </div>
+            <div class="mt-12 flex justify-center gap-2">
+                <div class="flex items-center bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">
+                    <i class="fas fa-check-circle text-green-300 mr-2"></i>
+                    <span>Certified Professionals</span>
+                </div>
+                <div class="flex items-center bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">
+                    <i class="fas fa-check-circle text-green-300 mr-2"></i>
+                    <span>10-Year Guarantee</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">About Roofing High</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3" alt="Construction Team" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Your Trusted Roofing Experts in Slough, UK</h3>
+                    <p class="text-gray-700 mb-4">
+                        Roofing High is a premier roofing and construction company based in Slough, SL2 2DR, UK. 
+                        With years of experience in the industry, we have built a reputation for delivering durable, 
+                        safe, and high-quality roofing solutions across the UK.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Our team of skilled professionals is committed to excellence, ensuring that every project 
+                        meets the highest standards of quality and workmanship. We take pride in our attention to 
+                        detail, timely delivery, and customer satisfaction.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start">
+                            <div class="bg-secondary text-white p-2 rounded-full mr-3">
+                                <i class="fas fa-check text-sm"></i>
+                            </div>
+                            <p class="text-gray-700">Skilled & Certified Professionals</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-secondary text-white p-2 rounded-full mr-3">
+                                <i class="fas fa-check text-sm"></i>
+                            </div>
+                            <p class="text-gray-700">Timely Project Completion</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-secondary text-white p-2 rounded-full mr-3">
+                                <i class="fas fa-check text-sm"></i>
+                            </div>
+                            <p class="text-gray-700">Quality Materials & Workmanship</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-secondary text-white p-2 rounded-full mr-3">
+                                <i class="fas fa-check text-sm"></i>
+                            </div>
+                            <p class="text-gray-700">Affordable Pricing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <h3 class="text-2xl font-semibold text-primary mb-6 text-center">Our Values</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-accent text-white p-6 rounded-lg shadow-lg">
+                        <div class="text-secondary text-3xl mb-4">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-2">Mission</h4>
+                        <p>To provide exceptional roofing solutions that protect properties and deliver lasting value to our clients through superior craftsmanship and reliable service.</p>
+                    </div>
+                    <div class="bg-accent text-white p-6 rounded-lg shadow-lg">
+                        <div class="text-secondary text-3xl mb-4">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-2">Vision</h4>
+                        <p>To be the most trusted name in UK roofing, known for our integrity, quality, and commitment to customer satisfaction.</p>
+                    </div>
+                    <div class="bg-accent text-white p-6 rounded-lg shadow-lg">
+                        <div class="text-secondary text-3xl mb-4">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-2">Values</h4>
+                        <p>Quality craftsmanship, honest communication, customer-first approach, safety standards, and continuous improvement drive everything we do.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-highlight font-semibold text-lg">WHAT WE OFFER</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Innovative Roofing Solutions</h2>
+                <div class="mx-auto w-24 h-1.5 bg-gradient-to-r from-highlight to-accent rounded-full"></div>
+                <p class="text-white/80 mt-6 max-w-2xl mx-auto text-lg">
+                    Specialized services backed by industry-leading expertise and premium materials
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gradient-to-b from-white to-white/90 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 service-card" onclick="openServiceModal('pitched')">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800" alt="Pitched Roof Services" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="absolute -top-5 right-4 bg-highlight text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">Pitched Roof Solutions</h3>
+                        <p class="text-gray-600 mb-4">Premium installation, repair, and maintenance for all pitched roof types with 10-year material warranty.</p>
+                        <button class="text-highlight font-semibold hover:text-orange-600 transition flex items-center gap-2">
+                            Learn More <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition service-card" onclick="openServiceModal('flat')">
+                    <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3" alt="Flat Roof Solutions" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Flat Roof Solutions</h3>
+                        <p class="text-gray-600">Comprehensive flat roofing solutions using high-quality materials for durability and weather resistance.</p>
+                        <button class="mt-4 text-secondary font-medium hover:underline">Read More →</button>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition service-card" onclick="openServiceModal('gutter')">
+                    <img src="https://images.unsplash.com/photo-1605087880595-8cc5db61f599?ixlib=rb-4.0.3" alt="Gutter Services" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Gutter, Fascia & Soffits</h3>
+                        <p class="text-gray-600">Installation, repair, and maintenance of guttering systems to protect your property from water damage.</p>
+                        <button class="mt-4 text-secondary font-medium hover:underline">Read More →</button>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition service-card" onclick="openServiceModal('chimney')">
+                    <img src="https://images.unsplash.com/photo-1519643381401-22a4b1f19bc2?ixlib=rb-4.0.3" alt="Chimney Work" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Chimney & Lead Work</h3>
+                        <p class="text-gray-600">Professional chimney repairs, repointing, and lead flashing installation to maintain structural integrity.</p>
+                        <button class="mt-4 text-secondary font-medium hover:underline">Read More →</button>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition service-card" onclick="openServiceModal('cleaning')">
+                    <img src="https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?ixlib=rb-4.0.3" alt="Roof Cleaning" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Roof & Gutter Cleaning</h3>
+                        <p class="text-gray-600">Professional cleaning services to remove moss, algae, and debris that can damage your roof over time.</p>
+                        <button class="mt-4 text-secondary font-medium hover:underline">Read More →</button>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition service-card" onclick="openServiceModal('repair')">
+                    <img src="https://images.unsplash.com/photo-1615859135338-37e7d39c6bde?ixlib=rb-4.0.3" alt="Roof Repair" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Reliable Roof Repair</h3>
+                        <p class="text-gray-600">Fast and effective repairs for leaks, damaged tiles, and other roofing issues to protect your property.</p>
+                        <button class="mt-4 text-secondary font-medium hover:underline">Read More →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Modals -->
+    <div class="service-modal fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4" id="pitched-modal">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[80vh] overflow-y-auto">
+            <div class="flex justify-between items-center p-4 border-b sticky top-0 bg-white">
+                <h3 class="text-xl font-bold text-primary">Pitched Roof Services</h3>
+                <button onclick="closeServiceModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-6 flex flex-col md:flex-row gap-6">
+                <img src="https://images.unsplash.com/photo-1635070210941-359e3b6eb7a0?ixlib=rb-4.0.3" alt="Pitched Roof" class="md:w-1/2 rounded-lg">
+                <div class="md:w-1/2">
+                    <p class="text-gray-700 mb-4">
+                        Our pitched roof services cover all aspects of installation, repair, and maintenance for traditional 
+                        and modern sloped roofs. We work with a variety of materials including clay tiles, concrete tiles, 
+                        slate, and shingles to provide the perfect solution for your property.
+                    </p>
+                    <h4 class="font-semibold text-gray-800 mb-2">Key Features:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 mb-4 space-y-1">
+                        <li>Expert installation of new pitched roofs</li>
+                        <li>Complete roof replacement services</li>
+                        <li>Specialized repairs for leaks and missing tiles</li>
+                        <li>Roof structure enhancements</li>
+                        <li>Bespoke solutions for period properties</li>
+                        <li>Full weatherproofing and insulation</li>
+                    </ul>
+                    <p class="text-gray-700 mb-4">
+                        Our team of experienced roofers has extensive knowledge of different roof designs and can advise on the 
+                        most suitable materials and techniques for your specific needs, budget, and local weather conditions.
+                    </p>
+                    <a href="https://wa.me/447832766458?text=Hello%20Roofing%20High,%20I'm%20interested%20in%20your%20Pitched%20Roof%20Services" 
+                       class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition duration-300 mt-4">
+                        <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-modal fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4" id="flat-modal">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[80vh] overflow-y-auto">
+            <div class="flex justify-between items-center p-4 border-b sticky top-0 bg-white">
+                <h3 class="text-xl font-bold text-primary">Flat Roof Solutions</h3>
+                <button onclick="closeServiceModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-6 flex flex-col md:flex-row gap-6">
+                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3" alt="Flat Roof" class="md:w-1/2 rounded-lg">
+                <div class="md:w-1/2">
+                    <p class="text-gray-700 mb-4">
+                        We provide comprehensive flat roofing solutions using top-quality materials including EPDM rubber, fibreglass (GRP), 
+                        felt, and modified bitumen. Our flat roof systems are designed for maximum durability and weather resistance 
+                        to protect your property for years to come.
+                    </p>
+                    <h4 class="font-semibold text-gray-800 mb-2">Our Services Include:</h4>
+                    <ul class="list-disc pl-5 text-gray-700 mb-4 space-y-1">
+                        <li>New flat roof installation</li>
+                        <li>Flat roof replacement and refurbishment</li>
+                        <li>Leak detection and repair</li>
+                        <li>Surface coating and waterproofing</li>
+                        <li>Insulation upgrades for energy efficiency</li>
+                        <li>Gutter and drainage solutions for flat roofs</li>
+                    </ul>
+                    <p class="text-gray-700 mb-4">
+                        Our skilled team can assess your current flat roof and recommend the most appropriate solution, whether it's 
+                        a complete replacement or targeted repairs. We prioritize proper drainage and vapor control to extend the 
+                        lifespan of your flat roof.
+                    </p>
+                    <a href="https://wa.me/447832766458?text=Hello%20Roofing%20High,%20I'm%20interested%20in%20your%20Flat%20Roof%20Solutions" 
+                       class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition duration-300 mt-4">
+                        <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add similar modal structures for other services here -->
+
+    <!-- Blog Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Latest Blog Posts</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+                <p class="text-gray-700 mt-4 max-w-2xl mx-auto">
+                    Expert roofing tips, maintenance advice, and industry insights
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1621891335865-fcd2d1c3fad6?ixlib=rb-4.0.3" alt="Roof Maintenance Tips" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span><i class="far fa-calendar mr-1"></i> 15 Jun 2023</span>
+                            <span class="mx-2">•</span>
+                            <span><i class="far fa-folder mr-1"></i> Maintenance</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">Essential Roof Maintenance Tips for UK Homeowners</h3>
+                        <p class="text-gray-600 mb-4">Protect your investment with these professional roofing maintenance tips tailored for the UK climate...</p>
+                        <a href="https://wa.me/447832766458?text=Hello%20Roofing%20High,%20I'd%20like%20to%20learn%20more%20about%20roof%20maintenance"
+                           class="inline-block bg-secondary hover:bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium transition">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1581578015269-d6d4783bd552?ixlib=rb-4.0.3" alt="Choosing Roof Materials" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span><i class="far fa-calendar mr-1"></i> 2 Jun 2023</span>
+                            <span class="mx-2">•</span>
+                            <span><i class="far fa-folder mr-1"></i> Materials</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">How to Choose the Right Roofing Materials for Your Home</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive guide to selecting the perfect roofing materials for UK weather conditions and your home's style...</p>
+                        <a href="https://wa.me/447832766458?text=Hello%20Roofing%20High,%20I%20need%20help%20choosing%20roofing%20materials"
+                           class="inline-block bg-secondary hover:bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium transition">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1622206156861-a20d70b4b6de?ixlib=rb-4.0.3" alt="Flat Roof Solutions" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span><i class="far fa-calendar mr-1"></i> 22 May 2023</span>
+                            <span class="mx-2">•</span>
+                            <span><i class="far fa-folder mr-1"></i> Flat Roofs</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">Flat Roof vs Pitched Roof: Which is Right for Your Property?</h3>
+                        <p class="text-gray-600 mb-4">Discover the pros and cons of flat and pitched roofs to make an informed decision for your next roofing project...</p>
+                        <a href="https://wa.me/447832766458?text=Hello%20Roofing%20High,%20I%20need%20advice%20on%20flat%20vs%20pitched%20roofs"
+                           class="inline-block bg-secondary hover:bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium transition">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://wa.me/447832766458?text=Hello%20Roofing%20High,%20I%20want%20to%20discuss%20a%20roofing%20topic"
+                   class="border border-secondary text-secondary hover:bg-secondary hover:text-white px-6 py-2 rounded-md inline-block transition">
+                    View All Blog Posts <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">What Our Clients Say</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+                <p class="mt-4 max-w-2xl mx-auto opacity-90">
+                    Don't just take our word for it - hear from our satisfied customers across the UK
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-accent p-6 rounded-lg testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl text-secondary mr-3">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">David Thompson</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "Roofing High did an excellent job replacing our aging roof. The team was professional, punctual, 
+                        and cleaned up perfectly after the job. Our new roof looks fantastic and has held up beautifully 
+                        through several storms already."
+                    </p>
+                </div>
+                
+                <div class="bg-accent p-6 rounded-lg testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl text-secondary mr-3">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "After a terrible experience with another roofing company, Roofing High came to our rescue. 
+                        They fixed all the issues at a reasonable price and were extremely knowledgeable. I highly 
+                        recommend their services to anyone needing roofing work."
+                    </p>
+                </div>
+                
+                <div class="bg-accent p-6 rounded-lg testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-3xl text-secondary mr-3">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Brown</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "The team at Roofing High installed a new flat roof on our extension. They completed the work 
+                        ahead of schedule and the quality is outstanding. We've had no issues with leaks and the roof 
+                        looks great. Will definitely use them again for future projects."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Our Recent Projects</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+                <p class="text-gray-700 mt-4 max-w-2xl mx-auto">
+                    Explore some of our completed roofing projects across the UK
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md project-card" onclick="openProjectModal('project1')">
+                    <img src="https://images.unsplash.com/photo-1625602812206-5ec545ca1231?ixlib=rb-4.0.3" alt="Residential Roof Replacement" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Residential Roof Replacement</h3>
+                        <p class="text-gray-600 mb-4">Complete roof replacement for a Victorian terrace in Slough</p>
+                        <button class="text-secondary font-medium hover:underline">View Details →</button>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md project-card" onclick="openProjectModal('project2')">
+                    <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3" alt="Flat Roof Installation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Flat Roof Installation</h3>
+                        <p class="text-gray-600 mb-4">EPDM flat roof system for a commercial property in Reading</p>
+                        <button class="text-secondary font-medium hover:underline">View Details →</button>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md project-card" onclick="openProjectModal('project3')">
+                    <img src="https://images.unsplash.com/photo-1596478156620-6a3d407f8341?ixlib=rb-4.0.3" alt="Gutter System Replacement" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Gutter System Replacement</h3>
+                        <p class="text-gray-600 mb-4">Full aluminum guttering and downpipe installation in London</p>
+                        <button class="text-secondary font-medium hover:underline">View Details →</button>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md project-card" onclick="openProjectModal('project4')">
+                    <img src="https://images.unsplash.com/photo-1600566752592-49b1a5b30d51?ixlib=rb-4.0.3" alt="Roof Repair Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Roof Repair Project</h3>
+                        <p class="text-gray-600 mb-4">Structural repairs and tile replacement for storm damage</p>
+                        <button class="text-secondary font-medium hover:underline">View Details →</button>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md project-card" onclick="openProjectModal('project5')">
+                    <img src="https://images.unsplash.com/photo-1617217794208-8e22a74a9bb9?ixlib=rb-4.0.3" alt="Chimney Repointing" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Chimney Repointing</h3>
+                        <p class="text-gray-600 mb-4">Specialist chimney work and lead flashing for a period property</p>
+                        <button class="text-secondary font-medium hover:underline">View Details →</button>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md project-card" onclick="openProjectModal('project6')">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3" alt="New Build Roofing" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">New Build Roofing</h3>
+                        <p class="text-gray-600 mb-4">Complete roofing installation for a new residential development</p>
+                        <button class="text-secondary font-medium hover:underline">View Details →</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="bg-secondary hover:bg-red-600 text-white px-8 py-3 rounded-md font-medium transition duration-300 inline-block">
+                    Get a Quote for Your Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <div class="service-modal fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4" id="project1-modal">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[80vh] overflow-y-auto">
+            <div class="flex justify-between items-center p-4 border-b sticky top-0 bg-white">
+                <h3 class="text-xl font-bold text-primary">Residential Roof Replacement</h3>
+                <button onclick="closeProjectModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <img src="https://images.unsplash.com/photo-1625602812206-5ec545ca1231?ixlib=rb-4.0.3" alt="Residential Roof Replacement" class="w-full h-64 object-cover rounded-lg mb-6">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Project Details</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-2">•</span>
+                                <span><strong>Location:</strong> Slough, Berkshire</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-2">•</span>
+                                <span><strong>Property Type:</strong> Victorian Terrace</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-2">•</span>
+                                <span><strong>Roof Area:</strong> 65 sqm</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-2">•</span>
+                                <span><strong>Duration:</strong> 4 days</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-2">•</span>
+                                <span><strong>Materials:</strong> Sandtoft 20/20 concrete tiles, breathable membrane</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Work Completed</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-2">•</span>
+                                <span>Complete removal of old roof structure and tiles</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-2">•</span>
+                                <span>Installation of new timber battens and counter battens</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-2">•</span>
+                                <span>New breathable membrane installed</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-2">•</span>
+                                <span>High-quality concrete tiles laid with proper ventilation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-secondary mr-2">•</span>
+                                <span>New lead flashing around chimneys and edges</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-100 p-4 rounded-lg mb-6">
+                    <h4 class="font-semibold text-gray-800 mb-2">Customer Testimonial</h4>
+                    <p class="text-gray-700 italic">
+                        "We're extremely pleased with the roof replacement carried out by Roofing High. The team was professional, 
+                        kept us informed throughout the process, and left the site spotless. The new roof has completely transformed 
+                        the look of our home and we've already noticed improved insulation. Highly recommended!"
+                    </p>
+                    <p class="text-gray-700 font-medium mt-2">- David & Sarah Thompson, Slough</p>
+                </div>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="bg-secondary hover:bg-red-600 text-white px-6 py-2 rounded-md font-medium transition duration-300">
+                        Get a Free Quote
+                    </a>
+                    <a href="https://wa.me/447832766458?text=Hello%20Roofing%20High,%20I'm%20interested%20in%20a%20similar%20roofing%20project" 
+                       class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition duration-300">
+                        <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add similar modals for other projects here -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Contact Roofing High</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+                <p class="text-gray-700 mt-4 max-w-2xl mx-auto">
+                    Get in touch for a free consultation, quote, or any roofing inquiries
+                </p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2">
+                    <form id="contactForm" class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary"></textarea>
+                        </div>
+                        <button type="submit" class="bg-secondary hover:bg-red-600 text-white px-6 py-2 rounded-md font-medium transition duration-300 w-full">
+                            Send Message
+                        </button>
+                        <div id="formSuccess" class="mt-4 text-green-600 hidden">
+                            <i class="fas fa-check-circle mr-2"></i> Thank you for your message! We'll get back to you soon.
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-bold text-primary mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <div class="text-secondary text-xl mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Our Address</h4>
+                                    <p class="text-gray-600">Wentworth Avenue, Slough SL2 2DR, UK</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-secondary text-xl mr-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Phone Number</h4>
+                                    <p class="text-gray-600">
+                                        <a href="tel:+447832766458" class="hover:text-secondary transition">+44 7832 766458</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-secondary text-xl mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Email Address</h4>
+                                    <p class="text-gray-600">
+                                        <a href="mailto:saqibshahkaswal@gmail.com" class="hover:text-secondary transition">saqibshahkaswal@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-secondary text-xl mr-4 mt-1">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Working Hours</h4>
+                                    <p class="text-gray-600">Monday to Friday: 8:00 AM - 6:00 PM</p>
+                                    <p class="text-gray-600">Saturday: 9:00 AM - 3:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h4 class="font-medium text-gray-800 mb-3">Find Us On Map</h4>
+                            <div class="aspect-w-16 aspect-h-9">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39705.12952357239!2d-0.61400485!3d51.52123845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48767baf7a5a2a73%3A0xe1c1cc34ab2f3212!2sSlough!5e0!3m2!1sen!2suk!4v1689327601607!5m2!1sen!2suk" 
+                                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" 
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-3">Connect With Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-primary hover:text-secondary text-xl transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="text-primary hover:text-secondary text-xl transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="text-primary hover:text-secondary text-xl transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="text-primary hover:text-secondary text-xl transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://wa.me/447832766458?text=Hello%20Roofing%20High,%20I'm%20interested%20in%20your%20services" 
+                                   class="text-primary hover:text-secondary text-xl transition">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="mb-8 md:mb-0">
+                    <a href="#" class="text-2xl font-bold flex items-center mb-4">
+                        <span class="text-secondary">Roofing</span>High
+                    </a>
+                    <p class="text-gray-300 mb-4">
+                        Professional roofing services in Slough and across the UK. Quality craftsmanship, reliable service, and customer satisfaction.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-secondary transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-secondary transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-secondary transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-secondary transition">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-secondary transition">About Us</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-secondary transition">Our Services</a></li>
+                        <li><a href="#projects" class="text-gray-300 hover:text-secondary transition">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-secondary transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Our Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-300 hover:text-secondary transition">Pitched Roof Services</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-secondary transition">Flat Roof Solutions</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-secondary transition">Gutter & Fascia</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-secondary transition">Roof Repairs</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-secondary transition">Chimney Work</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Newsletter</h4>
+                    <p class="text-gray-300 mb-4">
+                        Subscribe to our newsletter for the latest offers and roofing tips.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your Email" 
+                               class="px-4 py-2 rounded-l-md text-primary w-full focus:outline-none">
+                        <button type="submit" class="bg-secondary hover:bg-red-600 px-4 py-2 rounded-r-md transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    
+                    <div class="mt-6">
+                        <h4 class="font-bold text-lg mb-2">Emergency Call</h4>
+                        <a href="tel:+447832766458" class="text-secondary text-xl font-bold hover:text-red-400 transition">
+                            <i class="fas fa-phone-alt mr-2"></i> +44 7832 766458
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Roofing High. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-4 right-4 bg-secondary text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Service modals
+        function openServiceModal(serviceId) {
+            document.getElementById(`${serviceId}-modal`).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeServiceModal() {
+            document.querySelectorAll('.service-modal').forEach(modal => {
+                modal.classList.remove('active');
+            });
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Project modals
+        function openProjectModal(projectId) {
+            document.getElementById(`${projectId}-modal`).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeProjectModal() {
+            document.querySelectorAll('.service-modal').forEach(modal => {
+                modal.classList.remove('active');
+            });
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modals when clicking outside
+        window.addEventListener('click', (event) => {
+            if (event.target.classList.contains('service-modal')) {
+                closeServiceModal();
+                closeProjectModal();
+            }
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show the success message
+            
+            // Get form values
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value
+            };
+            
+            // In a real implementation, you would send this to your server
+            console.log('Form submitted:', formData);
+            
+            // Show success message
+            formSuccess.classList.remove('hidden');
+            contactForm.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 5000);
+        });
+        
+        // Scroll to top button
+        const scrollToTopButton = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.classList.remove('hidden');
+            } else {
+                scrollToTopButton.classList.add('hidden');
+            }
+        });
+        
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
